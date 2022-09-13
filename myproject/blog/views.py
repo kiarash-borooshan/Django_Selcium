@@ -22,7 +22,12 @@ def api(request):
         "3": {
             "title": "مقاله سوم",
             "id": "21",
-            "slug": "فاهقی-article"
+            "slug": "third-article"
+        },
+        "4": {
+            "title": "مقاله چهارم",
+            "id": "22",
+            "slug": "fourth-article"
         }
 
     }
