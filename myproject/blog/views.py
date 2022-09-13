@@ -33,4 +33,5 @@ def api(request):
     }
     """ this added in testing branch"""
     """ my favorite color is green"""
+    """ what's up bro? """
     return JsonResponse(data)
