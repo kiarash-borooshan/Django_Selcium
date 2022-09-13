@@ -31,8 +31,4 @@ def api(request):
         }
 
     }
-    """ this is main branch """
-    """ hey dud """
-    """ how are u? """
-    """ what time is it? """
     return JsonResponse(data)
