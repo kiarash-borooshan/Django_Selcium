@@ -6,33 +6,3 @@ from django.http import JsonResponse
 def home(request):
     return HttpResponse("hello, wolrd! hollodjango")
 
-
-def api(request):
-    data = {
-        "1": {
-            "title": "مقاله اول",
-            "id": "20",
-            "slug": "first-article"
-        },
-        "2": {
-            "title": "مقاله دوم",
-            "id": "21",
-            "slug": "second-article"
-        },
-        "3": {
-            "title": "مقاله سوم",
-            "id": "21",
-            "slug": "third-article"
-        },
-        "4": {
-            "title": "مقاله چهارم",
-            "id": "22",
-            "slug": "fourth-article"
-        }
-
-    }
-    """ this added in testing branch"""
-    """ my favorite color is green"""
-    """ what's up bro? """
-    """ im fine, thanks"""
-    return JsonResponse(data)
