@@ -1,8 +1,29 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.http import JsonResponse
+# from django.http import HttpResponse
+# from django.http import JsonResponse
 # Create your views here.
 
-def home(request):
-    return HttpResponse("hello, wolrd! hollodjango")
 
+def home(request):
+    contxt = {
+        "articles": [
+            {
+                "title": "شب درخشان نویر؛ در آستانه یک رکورد تاریخی",
+                "description": "در طول مسابقه موفق به خلق موقعیت های زیادی روی دروازه این تیم نشد. حتی در 45 دقیقه اول این حریف اسپانیایی بود که تیم برتر زمین به نظر می رسید، اما در دقایق ابتدایی نیمه دوم و در فاصله ای کوتاه بایرن مونیخ دو بار به گل رسیده و در نهایت دومین پیروزی متوالی خود در مرحله گروهی را کسب کرد.",
+                "img": "https://news-cdn.varzesh3.com/pictures/2022/09/14/C/rx4xihuy.jpg?w=315"
+            },
+            {
+                "title": "مهدوی‌کیا به همراه دو سوپراستار سینما در بایرآرنا",
+                "description": "مهدی مهدوی‌کیا بازیکن سابق تیم ملی که سابقه درخشش در بوندس‌لیگا را نیز دارد شب گذشته از نزدیک بازی بایرلورکوزن را در ورزشگاه خانگی این تیم تماشا کرد. به همراه او هوتن شکیبا و بهرام افشاری دو بازیگر شناخته شده سینمای ایران نیز حضور داشتند و پس از بازی عکس چهارنفره جالبی را کنار سردار به یادگار گرفتند.",
+                "img": "https://news-cdn.varzesh3.com/pictures/2022/09/14/C/vahymvgd.jpg?w=315"
+            },
+            {
+                "title": "عزت‌اللهی: هیچ کودتایی علیه اسکوچیچ نکردیم",
+                "description": "عزت‌اللهی: من قرارداد داشتم و در شروع فصل چون خودم هم دوست داشتم که در یک باشگاه دیگر بازی کنم، برای تمرینات پیش فصل نیامدم. پیشنهاداتی بود اما توافق حاصل نشد و سر مسائل مالی به توافق نرسیدیم. بنابراین من ترجیح دادم برگردم تمریناتم را شروع کنم و الان هم نزدیک دو هفته است که شرایط بدنی‌ام آماده بازی شده اما باتوجه به اینکه از شروع فصل در کنار تیم نبودم، زمان می‌برد وارد ترکیب اصلی شوم",
+                "img": "https://newsw-cdn.varzesh3.com/pictures/2022/06/01/D/0xcxk2na.jpg?w=315"
+            }
+        ]
+    }
+    return render(request=request,
+                  template_name="home.html",
+                  context=contxt)
